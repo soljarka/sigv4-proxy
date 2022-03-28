@@ -1,0 +1,14 @@
+version: '3'
+services:
+  proxy:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - SIGV4PROXY_PORT
+      - SIGV4PROXY_SERVICE
+      - SIGV4PROXY_ENDPOINT
+      - SIGV4PROXY_REGION
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
